@@ -5,7 +5,7 @@ import { headerIcons } from "@/constants";
 
 const MainHeader = () => {
   return (
-    <div className="h-24 w-full bg-slate-100">
+    <div className="h-24 w-full">
       <div className="flex justify-between items-center h-full container mx-auto">
         <BrandLogo />
         <GlobalSearch />
