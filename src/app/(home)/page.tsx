@@ -3,16 +3,18 @@ import MainHeader from "@/components/global/main-header";
 import StatusBar from "@/components/global/status-bar";
 import Highlights from "@/components/global/highlights";
 import CategorySection from "@/components/sections/category-section";
+import TrendSection from "@/components/sections/trend-section";
 
 const HomePage = () => {
   return (
-    <div>
+    <main>
       <StatusBar />
       <MainHeader />
       <HeroSection />
       <Highlights />
       <CategorySection />
-    </div>
+      <TrendSection />
+    </main>
   );
 };
 

@@ -13,7 +13,7 @@ export type Highlight = {
 };
 
 export type Category = {
-  id: number;
+  id: string;
   title: string;
   imgUrl: string;
 };
