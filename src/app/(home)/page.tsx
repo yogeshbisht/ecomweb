@@ -1,6 +1,7 @@
+import HeroSection from "./_components/hero-section";
 import MainHeader from "@/components/global/main-header";
 import StatusBar from "@/components/global/status-bar";
-import HeroSection from "./_components/hero-section";
+import Highlights from "@/components/global/highlights";
 
 const HomePage = () => {
   return (
@@ -8,6 +9,7 @@ const HomePage = () => {
       <StatusBar />
       <MainHeader />
       <HeroSection />
+      <Highlights />
     </div>
   );
 };
