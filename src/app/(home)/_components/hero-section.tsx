@@ -1,12 +1,8 @@
 "use client";
 
-import Autoplay from "embla-carousel-autoplay";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem
-} from "@/components/ui/carousel";
+import { CarouselItem } from "@/components/ui/carousel";
 import HeroBanner from "./hero-banner";
+import CustomCarousel from "@/components/global/custom-carousel";
 
 const carouselItems = [
   {
@@ -37,20 +33,18 @@ const carouselItems = [
 const HeroSection = () => {
   return (
     <div className="w-full bg-slate-100">
-      <Carousel opts={{ loop: true }} plugins={[Autoplay({ delay: 5000 })]}>
-        <CarouselContent>
-          {carouselItems.map((item) => (
-            <CarouselItem key={item.id}>
-              <HeroBanner
-                title={item.title}
-                description={item.description}
-                link={item.link}
-                imgUrl="https://picsum.photos/id/338/3000/600"
-              />
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-      </Carousel>
+      <CustomCarousel>
+        {carouselItems.map((item) => (
+          <CarouselItem key={item.id}>
+            <HeroBanner
+              title={item.title}
+              description={item.description}
+              link={item.link}
+              imgUrl="https://picsum.photos/id/338/3000/600"
+            />
+          </CarouselItem>
+        ))}
+      </CustomCarousel>
     </div>
   );
 };

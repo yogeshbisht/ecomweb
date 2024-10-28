@@ -11,3 +11,9 @@ export type Highlight = {
   link: string;
   imgUrl: string;
 };
+
+export type Category = {
+  id: number;
+  title: string;
+  imgUrl: string;
+};
