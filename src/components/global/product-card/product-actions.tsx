@@ -53,13 +53,15 @@ const ProductActions = ({ productSlug }: ProductActionsProps) => {
   return (
     <div className="flex flex-col gap-2">
       {productActions.map((action) => (
-        <Tooltip key={action.id}>
+        <Tooltip key={action.id} delayDuration={200}>
           <TooltipTrigger asChild>
             <Button size="icon" onClick={action.onClick}>
               {action.icon}
             </Button>
           </TooltipTrigger>
-          <TooltipContent>{action.label}</TooltipContent>
+          <TooltipContent side="left" sideOffset={12}>
+            {action.label}
+          </TooltipContent>
         </Tooltip>
       ))}
     </div>

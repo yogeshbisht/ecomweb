@@ -26,7 +26,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
             className="group-hover:scale-105 transition-all duration-300"
           />
         </Link>
-        <div className="absolute flex items-end justify-end p-2 bottom-0 right-0 transition-all duration-300 translate-x-20 group-hover:translate-x-0">
+        <div className="absolute flex items-end justify-end p-4 top-0 right-0 transition-all duration-300 translate-x-20 group-hover:translate-x-0">
           <ProductActions productSlug={product.slug} />
         </div>
       </div>

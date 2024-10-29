@@ -2,7 +2,7 @@ export type Review = {
   id: string;
   rating: number;
   comment: string;
-  createdAt: string;
+  createdAt: Date;
 };
 
 export type Product = {
