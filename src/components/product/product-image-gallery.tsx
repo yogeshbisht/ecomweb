@@ -17,7 +17,7 @@ const ProductImageGallery = ({ images }: ProductImageGalleryProps) => {
   const [api, setApi] = useState<CarouselApi>();
 
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-6 w-[640px]">
       <Carousel setApi={setApi}>
         <CarouselContent>
           {images.map((image) => (

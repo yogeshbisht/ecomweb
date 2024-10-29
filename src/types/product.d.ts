@@ -5,18 +5,25 @@ export type Review = {
   createdAt: Date;
 };
 
+type Stock = {
+  size: string;
+  quantity: number;
+};
+
+type ProductType = "apparel" | "accessory" | "shoes" | "watch";
+
 export type Product = {
   id: string;
   name: string;
+  type: ProductType;
   slug: string;
-  description?: string;
+  excerpt?: string;
+  description: string;
   categoryId: string;
   images: string[];
-  sizes?: string[];
-  colors?: string[];
   price: number;
   discountPercentage?: number;
-  stock?: number;
+  stock: Stock[];
   brand?: string;
   tags?: string[];
   isNew?: boolean;

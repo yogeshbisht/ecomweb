@@ -9,4 +9,11 @@ const getCurrencySymbol = (currency: string) => {
   }
 };
 
-export { getCurrencySymbol };
+const amountWithCurrency = (amount: number, currency: string = "USD") =>
+  new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency,
+    minimumFractionDigits: 2
+  }).format(amount);
+
+export { getCurrencySymbol, amountWithCurrency };
