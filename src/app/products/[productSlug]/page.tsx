@@ -13,9 +13,9 @@ async function getProduct(productSlug: string) {
 const ProductDetailsPage = async ({
   params
 }: {
-  params: { productSlug: string };
+  params: Promise<{ productSlug: string }>;
 }) => {
-  const { productSlug } = params;
+  const { productSlug } = await params;
   const product = await getProduct(productSlug);
 
   if (!product) {
